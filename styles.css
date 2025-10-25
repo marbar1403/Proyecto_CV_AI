@@ -1,0 +1,37 @@
+:root{--accent:#0066cc;--muted:#6b7280;--bg:#f7f9fc;--card:#ffffff}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.45;background:linear-gradient(180deg,var(--bg),#ffffff);padding:32px;color:#0f172a}
+
+.cv-wrap{max-width:900px;margin:0 auto;background:var(--card);border-radius:14px;display:grid;grid-template-columns:320px 1fr;gap:28px;padding:28px;box-shadow:0 8px 30px rgba(12,18,23,0.08)}
+
+.left{padding:18px;border-radius:10px;background:linear-gradient(180deg,#fbfdff, #ffffff);display:flex;flex-direction:column;gap:18px}
+.photo{height:110px;width:110px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#48a6ff);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px}
+.name{font-size:20px;font-weight:700}
+.role{color:var(--muted);font-size:13px}
+.contact-list{margin-top:6px;display:flex;flex-direction:column;gap:8px;font-size:14px}
+.contact-item{display:flex;gap:8px;align-items:center;color:#0f172a}
+.muted{color:var(--muted);font-size:13px}
+.badge{background:#eef6ff;color:var(--accent);padding:6px 10px;border-radius:999px;font-weight:600;font-size:13px;display:inline-block}
+
+.section{padding:12px 0;border-top:1px solid #f1f5f9}
+.section h3{font-size:13px;margin-bottom:10px;color:var(--muted);letter-spacing:0.6px}
+.edu-item{margin-bottom:10px}
+.edu-item strong{display:block}
+.skill-list{display:flex;flex-wrap:wrap;gap:8px}
+.skill{background:#f3f4f6;padding:6px 8px;border-radius:8px;font-weight:600;font-size:13px}
+
+.right{padding:8px 6px 18px 6px}
+.summary{margin-bottom:18px}
+.summary p{color:#0f172a}
+
+.work-item{margin-bottom:14px}
+.work-item header{display:flex;justify-content:space-between;align-items:flex-start}
+.work-item h4{font-size:16px}
+.work-item .time{color:var(--muted);font-size:13px}
+
+.projects{display:grid;gap:10px}
+
+@media (max-width:820px){.cv-wrap{grid-template-columns:1fr;padding:18px}.left{order:2}.right{order:1;padding-top:6px}}
+
+@media print{body{padding:0;background:white} .cv-wrap{box-shadow:none;border-radius:0}}
